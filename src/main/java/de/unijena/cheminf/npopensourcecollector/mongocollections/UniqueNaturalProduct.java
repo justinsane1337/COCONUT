@@ -1,11 +1,9 @@
 package de.unijena.cheminf.npopensourcecollector.mongocollections;
 
-import org.javatuples.Pair;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
-import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
@@ -26,8 +24,8 @@ public class UniqueNaturalProduct {
 
     public String smiles;
 
-    public String clean_smiles;
-
+    @Field("clean_smiles")
+    public String cleanSmiles;
 
 
     public String molecular_formula;
@@ -617,10 +615,10 @@ public class UniqueNaturalProduct {
     }
 
     public String getClean_smiles() {
-        return clean_smiles;
+        return cleanSmiles;
     }
 
     public void setClean_smiles(String clean_smiles) {
-        this.clean_smiles = clean_smiles;
+        this.cleanSmiles = cleanSmiles;
     }
 }
