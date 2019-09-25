@@ -1,9 +1,12 @@
 package de.unijena.cheminf.npopensourcecollector.mongocollections;
 
+import org.javatuples.Pair;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
@@ -18,19 +21,35 @@ public class UniqueNaturalProduct {
 
     public Integer heavy_atom_number;
 
+    @Indexed
     public String inchi;
 
+    @Indexed
     public String inchikey;
 
+    @Indexed
     public String smiles;
 
+    @Indexed
     @Field("clean_smiles")
     public String cleanSmiles;
 
 
+    @Indexed
     public String molecular_formula;
 
     public Double molecular_weight;
+
+
+    public ArrayList<String> citationDOI;
+
+    public ArrayList<Integer> taxid;
+
+    public ArrayList<String> continent;
+
+    @Indexed
+    public String name;
+
 
     public Double npl_noh_score;
 
@@ -151,7 +170,6 @@ public class UniqueNaturalProduct {
 
 
 
-    //TODO add additional features
 
     //TODO consider MDEDescriptor
     //TODO consider WHIMDescriptor
@@ -620,5 +638,38 @@ public class UniqueNaturalProduct {
 
     public void setClean_smiles(String clean_smiles) {
         this.cleanSmiles = cleanSmiles;
+    }
+
+
+    public ArrayList<String> getCitationDOI() {
+        return citationDOI;
+    }
+
+    public void setCitationDOI(ArrayList<String> citationDOI) {
+        this.citationDOI = citationDOI;
+    }
+
+    public ArrayList<Integer> getTaxid() {
+        return taxid;
+    }
+
+    public void setTaxid(ArrayList<Integer> taxid) {
+        this.taxid = taxid;
+    }
+
+    public ArrayList<String> getContinent() {
+        return continent;
+    }
+
+    public void setContinent(ArrayList<String> continent) {
+        this.continent = continent;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
