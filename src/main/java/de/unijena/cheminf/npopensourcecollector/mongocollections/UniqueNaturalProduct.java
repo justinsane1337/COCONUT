@@ -34,11 +34,12 @@ public class UniqueNaturalProduct {
     @Field("clean_smiles")
     public String cleanSmiles;
 
-
     @Indexed
-    public String molecular_formula;
+    @Field("molecular_formula")
+    public String molecularFormula;
 
-    public Double molecular_weight;
+    @Field("molecular_weight")
+    public Double molecularWeight;
 
 
     public ArrayList<String> citationDOI;
@@ -246,19 +247,19 @@ public class UniqueNaturalProduct {
     }
 
     public String getMolecular_formula() {
-        return molecular_formula;
+        return molecularFormula;
     }
 
     public void setMolecular_formula(String molecular_formula) {
-        this.molecular_formula = molecular_formula;
+        this.molecularFormula = molecular_formula;
     }
 
     public Double getMolecular_weight() {
-        return molecular_weight;
+        return molecularWeight;
     }
 
     public void setMolecular_weight(Double molecular_weight) {
-        this.molecular_weight = molecular_weight;
+        this.molecularWeight = molecular_weight;
     }
 
     public Double getNpl_noh_score() {

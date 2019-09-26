@@ -17,4 +17,8 @@ public interface UniqueNaturalProductRepository extends MongoRepository<UniqueNa
 
     public List<UniqueNaturalProduct> findByInchikey(@Param("inchikey") String inchikey);
 
+    public List<UniqueNaturalProduct> findByMolecularFormula(@Param("molecular_formula") String molecular_formula);
+
+    public List<UniqueNaturalProduct> findByMolecularWeight(@Param("molecular_weight") Double molecular_weight);
+
 }
