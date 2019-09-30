@@ -1,12 +1,9 @@
 package de.unijena.cheminf.npopensourcecollector.mongocollections;
 
-import org.javatuples.Pair;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
@@ -21,20 +18,20 @@ public class UniqueNaturalProduct {
 
     public Integer heavy_atom_number;
 
-    @Indexed
+    
     public String inchi;
 
-    @Indexed
+    
     public String inchikey;
 
-    @Indexed
+    
     public String smiles;
 
-    @Indexed
+    
     @Field("clean_smiles")
     public String cleanSmiles;
 
-    @Indexed
+    
     @Field("molecular_formula")
     public String molecularFormula;
 
@@ -48,7 +45,7 @@ public class UniqueNaturalProduct {
 
     public ArrayList<String> continent;
 
-    @Indexed
+    
     public String name;
 
 

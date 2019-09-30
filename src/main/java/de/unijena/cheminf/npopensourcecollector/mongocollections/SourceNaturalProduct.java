@@ -1,7 +1,6 @@
 package de.unijena.cheminf.npopensourcecollector.mongocollections;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.ArrayList;
@@ -13,7 +12,7 @@ public class SourceNaturalProduct {
     @Id
     public String id;
 
-    @Indexed
+    
     public String source;
 
     public String originalSmiles;
@@ -24,10 +23,10 @@ public class SourceNaturalProduct {
 
     public String originalInchiKey;
 
-    @Indexed
+    
     public String simpleInchi;
 
-    @Indexed
+    
     public String simpleInchiKey;
 
     public Integer heavyAtomNumber;

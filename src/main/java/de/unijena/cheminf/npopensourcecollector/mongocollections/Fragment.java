@@ -1,9 +1,6 @@
 package de.unijena.cheminf.npopensourcecollector.mongocollections;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.CompoundIndex;
-import org.springframework.data.mongodb.core.index.Indexed;
-import org.springframework.data.mongodb.core.index.TextIndexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.ArrayList;
@@ -16,7 +13,7 @@ public class Fragment {
 
     public Integer withsugar;
 
-    @Indexed
+
     public String signature;
 
     public Integer height;
